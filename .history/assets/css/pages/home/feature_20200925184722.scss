@@ -1,0 +1,103 @@
+.featured {
+    padding-bottom: 2.5rem;
+    font-family: $monster;
+    &__title {
+        padding-top: 4.7rem;
+        padding-bottom: 5rem;
+        h5 {
+            letter-spacing: 5.2px;
+            font-size: 12px;
+            color: $purple;
+            padding-bottom: 0.5rem;
+        }
+        h2 {
+            letter-spacing: 2px;
+            padding-bottom: 2.2rem;
+            font-size: 2.5rem;
+            color: black;
+        }
+    }
+    &__line {
+        height: 2px;
+        width: 5rem;
+        background-color: $purple;
+    }
+    &__img {
+        position: relative;
+        img {
+            display: block;
+        }
+        .featured__overlay {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            // width: 100%;
+            // height: 100%;
+            // display: flex;
+            // align-items: flex-end;
+            &--text {
+                padding-left: 0.8rem;
+                a  { color: #000000;
+                    text-decoration: none;
+                    font-size: 12px;
+                    padding: 1.6rem 1.5rem 1.1rem 1.5rem;
+                    background-color: white;
+                    &:hover {
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
+    &__card {
+        &--text {
+            padding: 1.65rem 0 4rem 0;
+            h4 {
+                font-weight: 400;
+            }
+            &>h5 {
+                text-transform: initial;
+                font-size: 15px;
+                font-family: $open;
+            }
+        }
+    }
+    &__star {
+        padding: 0.6rem 0 0.9rem 0;
+        display: flex;
+        li svg {
+            font-size: 12px;
+        }
+        li path {
+            color: #face6d;
+        }
+        li:last-child path {
+            color: #000000;
+        }
+    }
+    &__price {
+        display: flex;
+        li {
+            h4 {
+                font-weight: 400;
+                padding-right: 0.1rem;
+                font-size: 1.5rem;
+                color: #999999;
+                text-decoration: line-through #999999;
+            }
+            h5 {
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: $purple;
+            }
+        }
+    }
+}
+
+@include breakpoint(991) {
+    .featured {
+        &__card {
+            padding: 0 3.5rem;
+        }
+    }
+}

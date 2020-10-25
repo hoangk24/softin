@@ -1,0 +1,134 @@
+.banner {
+    padding: 3rem 0;
+    padding-top: 11rem;
+    img {
+        display: block;
+    }
+    &__ads1 {
+        position: relative;
+        .banner__overlay1 {
+           
+            
+            right: 9.5rem;
+            top: 50%;
+              transform: translateY(-50%);
+             position: absolute;
+            // width: 100%;
+            // height: 100%;
+            // display: flex;
+            // justify-content: flex-end;
+            // align-items: center;
+
+            .overlay1--text {
+                padding-top: 15.5rem;
+                h1 {
+                    font-size: 3rem;
+                    color: black;
+                    font-weight: bold;
+                    font-family: $pacifico;
+                }
+                .banner__btn {
+                    padding-top: 2.7rem;
+                    a { text-decoration: none;
+                        padding: 1.1rem 1.9rem;
+                        font-size: 14px;
+                        background-color: $purple;
+                        color: white;
+                    }
+                    text-align: right;
+                }
+            }
+        }
+    }
+    &__ads2 {
+        font-family: $monster;
+        position: relative;
+        margin-bottom: 3rem;
+        .banner__overlay2 {
+            position: absolute;
+         
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5.5rem;
+            // width: 100%;
+            // height: 100%;
+            // display: flex;
+            // align-items: center;
+            // padding-left: 5.5rem;
+            h3 {
+                line-height: 0.8;
+                letter-spacing: 4px;
+                padding-top: 1.8rem;
+                font-weight: 500;
+                font-size: 1.6rem;
+            }
+            h2 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+        }
+    }
+    &__ads3 {
+        position: relative;
+        .banner__overlay3 {
+            position: absolute;
+        
+            top: 50%;
+            transform: translateY(-54%);
+            left: 3.9rem;
+            // width: 100%;
+            // height: 100%;
+            // display: flex;
+            // align-items: center;
+            // padding-left: 3.9rem;
+            // padding-bottom: 1rem;
+            h3 {
+                padding-top: 1.5rem;
+                font-weight: 500;
+                font-size: 1.7rem;
+                line-height: 1;
+                letter-spacing: 3.6px;
+            }
+            h2 {
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 2.1rem;
+                line-height: 0.6;
+            }
+            .banner__btn {
+                padding-top: 3.5rem;
+                a {
+                    padding: 1rem 2.1rem;
+                    font-size: 14px;
+                    background-color: $purple;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(991) {
+    .banner {
+        .banner__ads1 {
+            padding-bottom: 2rem;
+        }
+        padding-top: 7rem;
+        &__ads1 {
+            .banner__overlay1 {
+                padding-right: 5rem;
+                .overlay1--text {
+                    padding-top: 3rem;
+                    h1 {
+                        font-size: 2.2rem;
+                        color: black;
+                        font-weight: bold;
+                        font-family: $pacifico;
+                    }
+                }
+            }
+        }
+    }
+}

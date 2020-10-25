@@ -1,0 +1,108 @@
+.process {
+    padding: 4rem 0;
+    background-image: url(../img/03.png);
+    background-color: black;
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 4.6rem;
+            font-family: $web;
+            @include breakpoint(992) {
+                font-size: 2rem;
+            }
+        }
+        margin-bottom: 6rem;
+    }
+    .card {
+        padding-bottom: 2rem;
+        text-align: center;
+        &-icon {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 140px;
+            border: 1px solid white;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .step-num {
+                background: #fff;
+                border-radius: 50%;
+                box-shadow: 0 12px 20px 0 rgba(117, 178, 240, 0.4);
+                color: $main;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 600;
+                height: 50px;
+                right: 0;
+                line-height: 55px;
+                position: absolute;
+                text-align: center;
+                top: 0;
+                width: 50px;
+            }
+            i {
+                border-radius: 50%;
+                font-size: 4rem;
+                color: white;
+            }
+        }
+        &-title {
+            color: $main;
+            font-size: 2rem;
+            line-height: 3rem;
+            font-family: $web;
+            font-weight: 500;
+            padding: 2rem;
+        }
+        &-text {
+            color: white;
+            font-size: 15px;
+            line-height: 22px;
+            font-weight: 400;
+            font-family: $heebo;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        &-loader {
+            @include breakpoint(992) {
+                display: none;
+            }
+            position: absolute;
+            left: 100%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            span {
+                white-space: nowrap;
+                font-size: 10rem;
+                padding: 0 0.6rem;
+                color: $main;
+            }
+            span:nth-child(1) {
+                animation: changeOP 1s ease-in-out 0.33s infinite;
+            }
+            span:nth-child(2) {
+                animation: changeOP 1s ease-in-out 0.66s infinite;
+            }
+            span:nth-child(3) {
+                animation: changeOP 1s ease-in-out 0.99s infinite;
+            }
+        }
+    }
+}
+
+@keyframes changeOP {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

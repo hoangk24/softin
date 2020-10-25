@@ -1,0 +1,112 @@
+.footer {
+    padding-top: 5.8rem;
+    background-color: #222222;
+    color: white;
+    &__about {
+        padding-bottom: 4.8rem;
+        &--title {
+            h2 {
+                word-spacing: 3px;
+                font-size: 1.8rem;
+            }
+            padding-bottom: 2.8rem;
+            border-bottom: 1px solid #888888;
+        }
+        p {
+            padding-top: 2.2rem;
+            color: #888888;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+        &--social {
+            padding-top: 2.8rem;
+            display: flex;
+            font-size: 1.6rem;
+            li {
+                path {
+                    color: #888888;
+                }
+                padding-right: 3rem;
+            }
+        }
+    }
+    &__nav {
+        &--title {
+            h2 {
+                font-size: 1.8rem;
+            }
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #888888;
+        }
+        .footer__list {
+            padding-top: 2.8rem;
+            display: flex;
+            ul li {
+                padding-bottom: 1.2rem;
+                font-size: 14px;
+                color: #888888;
+                a {
+                    font-size: 14px;
+                    color: #888888;
+                    text-decoration: none;
+                }
+            }
+            .footer__list--left {
+                padding-right: 12.8rem;
+            }
+        }
+    }
+    &__shop {
+        &--title {
+            h2 {
+                word-spacing: 3px;
+                font-size: 1.8rem;
+            }
+            padding-bottom: 2.8rem;
+            border-bottom: 1px solid #888888;
+        }
+        &--list {
+            padding-top: 2.8rem;
+            li {
+                padding-bottom: 1.4rem;
+                a {
+                    text-decoration: none;
+                    padding-bottom: 1.4rem;
+                    font-size: 14.5px;
+                    color: #888888;
+                }
+            }
+        }
+    }
+    &__bottom {
+        &__content {
+            padding: 2.2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        border-top: 1px solid #888888;
+        padding-top: 0.2rem;
+        .footer__bottom--left {
+            font-size: 14px;
+            color: #888888;
+            word-spacing: 3px;
+            path {
+                margin-left: 0.5rem;
+                color: red;
+            }
+            span {
+                color: white;
+            }
+        }
+        .footer__bottom--right {
+            display: flex;
+            font-size: 2rem;
+            color: #888888;
+            margin-top: -1rem;
+            li {
+                padding: 0 0 0 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,197 @@
+    .wrapper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .headerTop {
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: white;
+    }
+    
+    .header {
+        transition: 0.3s;
+        position: relative;
+        height: 8rem;
+        border-bottom: 1px solid rgba(116, 116, 116, 0.521);
+        .header__logo {
+            h2 {
+                font-size: 2.1rem;
+                font-weight: bold;
+                color: $black;
+                letter-spacing: 15px;
+                padding: 0.7rem 0.8rem 0.7rem 1.6rem;
+                border: 2px solid $black;
+            }
+        }
+        display: flex;
+        align-items: center;
+        .header__menu {
+            padding-left: 12.7rem;
+            display: flex;
+            .menu--list:first-child a {
+                color: $purple;
+            }
+            .menu--list a {
+                text-decoration: none;
+                white-space: nowrap;
+                color: $black;
+                padding: 0.5rem 2.75rem 0.5rem 2.75rem;
+                font-family: $monster;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            .menu--list:last-child a {
+                padding-left: 3rem;
+            }
+        }
+        .header__cart {
+            display: flex;
+            .cart {
+                padding-left: 2.8rem;
+            }
+            svg {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    
+    @include min-breakpoint(992) {
+        .header {
+            .header__logo {
+                left: 3rem;
+                position: absolute;
+            }
+            .header__cart {
+                position: absolute;
+                right: 3rem;
+            }
+        }
+    }
+    
+    @include min-breakpoint(1200) {
+        .container {
+            min-width: 1170px;
+        }
+    }
+    
+    @include breakpoint(574) {
+        .header {
+            .header__logo {
+                h2 {
+                    font-size: 1.5rem;
+                }
+            }
+            .header__cart {
+                svg {
+                    font-size: 1.8rem;
+                }
+                .cart {
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+    }
+    
+    @include breakpoint(1900) {
+        .header {
+            .header__logo {
+                margin-left: 2rem;
+                position: static;
+            }
+            .header__menu {
+                .menu--list a {
+                    padding: 0.5rem 1rem;
+                }
+                padding-left: 0rem;
+            }
+        }
+    }
+    
+    .humber {
+        display: none;
+    }
+    
+    @include breakpoint(1023) {
+        html {
+            font-size: 58%;
+        }
+    }
+    
+    @include breakpoint(991) {
+        .header {
+            background-color: $black;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            .header__logo {
+                border: 2px solid rgb(255, 255, 255);
+                color: rgb(255, 255, 255);
+                h2 {
+                    color: white;
+                }
+            }
+            .header__menu {
+                overflow: hidden;
+                transition: 0.3s;
+                left: 0;
+                max-height: 0;
+                padding-left: 0;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                background-color: white;
+                background-color: $black;
+                .menu--list {
+                    padding: 1.5rem 0;
+                }
+                .menu--list a {
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .showMenu {
+                max-height: 100vh;
+            }
+            .header__cart {
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                right: 1rem;
+                color: white;
+                .cart {
+                    padding-left: 0.5rem;
+                }
+            }
+        }
+        .humber {
+            cursor: pointer;
+            padding-right: 0.8rem;
+            display: block;
+        }
+    }
+    
+    @include min-breakpoint(992) {
+        .headerTop .navMenu {
+            background-color: $black;
+        }
+        .navMenu {
+            .header__cart {
+                color: white;
+            }
+            .header__menu {
+                .menu--list a {
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .header__logo {
+                border: 2px solid rgb(255, 255, 255);
+                color: rgb(255, 255, 255);
+                h2 {
+                    color: white;
+                }
+            }
+        }
+    }
